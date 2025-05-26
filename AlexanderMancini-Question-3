@@ -1,0 +1,14 @@
+# list of tuples
+students = [("Alice", 85), ("Bob", 78), ("Charlie", 92)]
+
+# Convert list of tuples into a dictionary (name -> score)
+student_dict = dict(students)
+print("Student Dictionary:", student_dict)
+
+# Filter students who scored above 80 using dictionary comprehension
+high_scorers = {name: score for name, score in student_dict.items() if score > 80}
+print("High Scorers (score > 80):", high_scorers)
+
+# Extract just the names using list comprehension
+names_only = [name for name in student_dict.keys()]
+print("Names of All Students:", names_only)
